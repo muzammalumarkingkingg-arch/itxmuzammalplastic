@@ -5,27 +5,24 @@
 <title>ITX MUZAMMAL PLASTIC - Faisalabad</title>
 <style>
 *{box-sizing:border-box}body{margin:0;background:#000;color:#fff;font-family:Arial}
-.header{border:2px solid #D4AF37;margin:8px;padding:8px 12px;display:flex;justify-content:space-between;align-items:center;background:#080808}
-.header img{width:70px;height:70px;border-radius:50%;border:2px solid #D4AF37;background:#000;object-fit:cover}
-.header-right{text-align:right}
-.header-right b{color:#D4AF37;font-size:16px;display:block;line-height:1.2}
-.header-right span{color:#D4AF37;font-size:15px}
-.nav{border:1.5px solid #D4AF37;margin:0 8px;display:flex;background:#0a0a0a}
-.nav a{flex:1;text-align:center;padding:12px 2px;color:#D4AF37;text-decoration:none;font-size:13px;border-right:1px solid #333}
+.header{border:2px solid #D4AF37;margin:8px;padding:10px;display:flex;justify-content:space-between;align-items:center;background:#0a0a0a}
+.header img{width:65px;height:65px;border-radius:50%;border:2px solid #D4AF37;background:#000;object-fit:cover}
+.header-right{text-align:right}.header-right b{color:#D4AF37;font-size:14px;display:block}.header-right span{color:#D4AF37;font-size:13px}
+.nav{border:1.5px solid #D4AF37;margin:0 8px;display:flex;background:#111}
+.nav a{flex:1;text-align:center;padding:12px 2px;color:#D4AF37;text-decoration:none;font-size:11px;border-right:1px solid #333}
 .nav a:last-child{border:none}
-.search{margin:8px;display:flex}
-.search input{flex:1;padding:12px;border-radius:25px;border:1px solid #D4AF37;background:#111;color:#fff;outline:none}
-.hero{text-align:center;padding:20px 10px;background:#0f0f0f;border-bottom:1px solid #222}
-.hero h2{color:#D4AF37;margin:0 0 5px 0;font-size:18px}
-.hero p{color:#aaa;margin:0 0 15px 0;font-size:12px}
-.wbtns{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
-.wbtn{background:#D4AF37;color:#000;padding:8px 14px;border-radius:20px;text-decoration:none;font-weight:bold;font-size:12px;display:flex;align-items:center;gap:5px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px;background:#080808}
-.card{background:#151515;border:1px solid #D4AF37;border-radius:8px;overflow:hidden;text-align:center;padding-bottom:8px}
-.card img{width:100%;height:120px;object-fit:cover;background:#000}
-.card h4{color:#D4AF37;margin:8px 5px 3px 5px;font-size:13px}
-.card p{color:#ccc;margin:0;font-size:12px}
-.footer{text-align:center;padding:10px;font-size:10px;color:#777;border-top:1px solid #333;margin-top:10px}
+.search{margin:8px}.search input{width:100%;padding:12px;border-radius:25px;border:1px solid #D4AF37;background:#111;color:#fff;outline:none}
+.title{text-align:center;padding:15px 10px;background:#0f0f0f}
+.title h2{color:#D4AF37;margin:0;font-size:16px}.title p{color:#888;margin:5px 0 10px 0;font-size:11px}
+.wbtns{display:flex;gap:8px;justify-content:center}
+.wbtn{background:#D4AF37;color:#000;padding:8px 14px;border-radius:20px;text-decoration:none;font-weight:bold;font-size:12px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px}
+.card{background:#151515;border:1px solid #D4AF37;border-radius:10px;text-align:center;overflow:hidden;padding-bottom:8px}
+.card img{width:100%;height:110px;object-fit:cover;background:#000}
+.card h4{color:#D4AF37;margin:8px 4px 2px 4px;font-size:12px}
+.card .rate{color:#000;background:#D4AF37;padding:2px 8px;border-radius:10px;font-weight:bold;font-size:12px;display:inline-block;margin-top:4px}
+.card .size{color:#888;font-size:10px;display:block;margin-top:2px}
+.footer{text-align:center;padding:10px;font-size:9px;color:#666;border-top:1px solid #333;margin-top:10px}
 .hidden{display:none!important}
 </style>
 </head>
@@ -41,82 +38,63 @@
 
 <div class="nav">
 <a href="#" onclick="showAll()">HOME</a>
-<a href="#" onclick="filterCat('stock')">STOCK</a>
+<a href="#" onclick="filterCat('allsize')">STOCK</a>
 <a href="#" onclick="filterCat('popular')">POPULAR</a>
 <a href="#" onclick="filterCat('premium')">PREMIUM</a>
 <a href="#" onclick="document.getElementById('search').focus()">SEARCH</a>
 </div>
 
-<div class="search">
-<input type="text" id="search" onkeyup="doSearch()" placeholder="Search... PP, Bottle, Box">
-</div>
+<div class="search"><input id="search" onkeyup="doSearch()" placeholder="Search Bottle... Ringo, Balo, Coke"></div>
 
-<div class="hero">
-<h2>Plastic Bottles & Boxes Wholesale</h2>
-<p>Premium Quality Packaging Solutions Faisalabad</p>
+<div class="title">
+<h2>Plastic Bottles Wholesale Faisalabad</h2>
+<p>Premium Quality - All Sizes Available</p>
 <div class="wbtns">
 <a class="wbtn" href="https://wa.me/923366663864">📱 0336-6663864</a>
 <a class="wbtn" href="https://wa.me/923041608569">📱 0304-1608569</a>
 </div>
 </div>
 
-<!-- ========= YAHAN SE PRODUCTS START - APNI PHOTO / NAAM / RATE YAHAN BADLO ========= -->
-<div class="grid" id="productGrid">
+<div class="grid" id="grid">
 
-<!-- ITEM 1 -->
-<div class="card" data-cat="stock popular" data-name="500ml clear plastic bottle">
-<img src="https://via.placeholder.com/300/111/D4AF37?text=500ml+Bottle">
-<h4>500ml Clear Plastic Bottle</h4>
-<p>From Rs.12/pc</p>
-</div>
+<div class="card" data-name="ringo bottle"><img src="https://via.placeholder.com/300/111/D4AF37?text=RINGO+BOTTLE"><h4>RINGO</h4><span class="rate">Rs. 20.50</span><span class="size">All size</span></div>
 
-<!-- ITEM 2 -->
-<div class="card" data-cat="stock" data-name="1l pet bottle">
-<img src="https://via.placeholder.com/300/111/D4AF37?text=1L+Bottle">
-<h4>1L PET Bottle</h4>
-<p>From Rs.20/pc</p>
-</div>
+<div class="card" data-name="balo bottle"><img src="https://via.placeholder.com/300/111/D4AF37?text=BALO+BOTTLE"><h4>BALO</h4><span class="rate">Rs. 18.50</span><span class="size">All size</span></div>
 
-<!-- ITEM 3 -->
-<div class="card" data-cat="popular premium" data-name="food grade plastic box">
-<img src="https://via.placeholder.com/300/111/D4AF37?text=Food+Box">
-<h4>Food Grade Plastic Box</h4>
-<p>From Rs.35/pc</p>
-</div>
+<div class="card" data-name="zam zam wali bottle"><img src="https://via.placeholder.com/300/111/D4AF37?text=ZAM+ZAM+WALI"><h4>ZAM ZAM WALI</h4><span class="rate">Rs. 18.50</span><span class="size">All size</span></div>
 
-<!-- ITEM 4 -->
-<div class="card" data-cat="premium" data-name="cosmetic jar 250ml">
-<img src="https://via.placeholder.com/300/111/D4AF37?text=Cosmetic+Jar">
-<h4>Cosmetic Jar 250ml</h4>
-<p>From Rs.20/pc</p>
-</div>
+<div class="card" data-name="jucie wali bottle"><img src="https://via.placeholder.com/300/111/D4AF37?text=JUCIE+WALI"><h4>JUCIE WALI</h4><span class="rate">Rs. 20.50</span><span class="size">All size</span></div>
 
-<!-- NAYA ITEM ADD KARNA HO TO UPAR WALE CARD KO COPY KARKE YAHAN PASTE KARO -->
+<div class="card" data-name="tower bottle"><img src="https://via.placeholder.com/300/111/D4AF37?text=TOWER+BOTTLE"><h4>TOWER</h4><span class="rate">Rs. 50.50 / 100.50</span><span class="size">All size</span></div>
+
+<div class="card" data-name="sprit wali bottle"><img src="https://via.placeholder.com/300/111/D4AF37?text=SPRIT+WALI"><h4>SPRIT. WALI</h4><span class="rate">Rs. 30.50</span><span class="size">All size</span></div>
+
+<div class="card" data-name="bleache wali bottle"><img src="https://via.placeholder.com/300/111/D4AF37?text=BLEACHE+WALI"><h4>BLEACHE WALI</h4><span class="rate">Rs. 50.30</span><span class="size">All size</span></div>
+
+<div class="card" data-name="tazaib wali bottle"><img src="https://via.placeholder.com/300/111/D4AF37?text=TAZAIB+WALI"><h4>TAZAIB WALI</h4><span class="rate">Rs. 50.30</span><span class="size">All size</span></div>
+
+<div class="card" data-name="coke wali bottle"><img src="https://via.placeholder.com/300/111/D4AF37?text=COKE+WALI"><h4>COKE WALI</h4><span class="rate">Rs. 28.33</span><span class="size">All size</span></div>
+
+<div class="card" data-name="sprit wali bottle"><img src="https://via.placeholder.com/300/111/D4AF37?text=SPRIT+WALI+2"><h4>SPRIT WALI</h4><span class="rate">Rs. 28.33</span><span class="size">All size</span></div>
+
+<div class="card" data-name="vazil ne wali bottle vaseline"><img src="https://via.placeholder.com/300/111/D4AF37?text=VAZILINE+WALI"><h4>VAZIL NE WALI</h4><span class="rate">Rs. 25.50</span><span class="size">All size</span></div>
+
+<div class="card" data-name="water wali bottle"><img src="https://via.placeholder.com/300/111/D4AF37?text=WATER+WALI"><h4>WATER WALI</h4><span class="rate">Rs. 28.33</span><span class="size">All size</span></div>
 
 </div>
-<!-- ========= PRODUCTS END ========= -->
 
-<div class="footer">
-Since 2022 • Faisalabad • Pakistan • Wholesale Only<br>
-ITX MUZAMMAL PLASTIC - 03366663864 - 0304-1608569
-</div>
+<div class="footer">ITX MUZAMMAL PLASTIC - Since 2022 - Faisalabad - 03366663864 / 03041608569<br>Home | Stock | Popular | Premium | Search</div>
 
 <script>
-function filterCat(cat){
-document.querySelectorAll('.card').forEach(c=>{
-c.classList.toggle('hidden', !c.dataset.cat.includes(cat));
-});
-}
-function showAll(){
-document.querySelectorAll('.card').forEach(c=>c.classList.remove('hidden'));
-}
 function doSearch(){
 let q=document.getElementById('search').value.toLowerCase();
 document.querySelectorAll('.card').forEach(c=>{
-let name=c.dataset.name.toLowerCase();
-c.classList.toggle('hidden', !name.includes(q));
+let n=c.dataset.name.toLowerCase();
+c.classList.toggle('hidden',!n.includes(q));
 });
 }
+function showAll(){document.querySelectorAll('.card').forEach(c=>c.classList.remove('hidden'))}
+function filterCat(cat){showAll()}
 </script>
 </body>
-</html>
+  </html>
